@@ -1,0 +1,14 @@
+[Unit]
+Description=go-template
+After=network.target remote-fs.target nss-lookup.target nginx.target mongod.target
+[Service]
+WorkingDirectory=/etc/go-template
+ExecStart=/usr/local/bin/go-template --config /etc/go-template/config.yaml
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=go-template
+User=root
+Environment=
+[Install]
+WantedBy=multi-user.target
+

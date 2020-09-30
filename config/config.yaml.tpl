@@ -1,0 +1,4 @@
+---
+logger:
+  logFile:
+  debug: true
